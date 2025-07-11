@@ -1,0 +1,478 @@
+.logobrand-bugolf-icon {
+    position: absolute;
+    top: 674.33px;
+    left: 547.8px;
+    width: 120px;
+    height: 19px;
+    overflow: hidden;
+}
+.i {
+    position: relative;
+    line-height: 90%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.yards {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    transform:  rotate(-90deg);
+}
+.unit-system {
+    width: 13.5px;
+    height: 33.7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 4.9px;
+    box-sizing: border-box;
+    font-size: 9.42px;
+    font-family: Barlow;
+}
+.metric {
+    height: 33.7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3.1px;
+}
+.target-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.metrics {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 104.5px;
+    height: 83.1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7.3px 0px 0px;
+    box-sizing: border-box;
+}
+.metrics-wrapper {
+    position: absolute;
+    top: 28.11px;
+    left: 0px;
+    width: 104.5px;
+    height: 83.1px;
+}
+.carry {
+    position: absolute;
+    top: 0px;
+    left: 11.26px;
+    font-size: 17.13px;
+    line-height: 90%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: Barlow;
+    color: #d63636;
+    width: 76.8px;
+    height: 28.1px;
+}
+.metric-tile {
+    position: absolute;
+    top: 0px;
+    left: 5.14px;
+    width: 104.5px;
+    height: 111.2px;
+}
+.group-parent {
+    position: absolute;
+    top: 0px;
+    left: 174.5px;
+    width: 104.5px;
+    height: 111.2px;
+}
+.metrics-frame {
+    position: absolute;
+    top: 28.11px;
+    left: 5.14px;
+    width: 104.5px;
+    height: 83.1px;
+}
+.shot-type {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 17.13px;
+    line-height: 90%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: Barlow;
+    color: #d63636;
+    width: 109.6px;
+    height: 28.1px;
+}
+.group-container {
+    position: absolute;
+    top: 0px;
+    left: 338.7px;
+    width: 109.6px;
+    height: 111.2px;
+}
+.ball-speed {
+    position: absolute;
+    top: 0px;
+    left: 2.68px;
+    font-size: 17.13px;
+    line-height: 90%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: Barlow;
+    color: #d63636;
+    width: 94px;
+    height: 28.1px;
+}
+.group-div {
+    position: absolute;
+    top: 141.35px;
+    left: 5.14px;
+    width: 104.5px;
+    height: 111.2px;
+}
+.metrics-wrapper2 {
+    position: absolute;
+    top: 28.11px;
+    left: 11.49px;
+    width: 104.5px;
+    height: 83.1px;
+}
+.launch-ang {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 17.13px;
+    line-height: 90%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: Barlow;
+    color: #d63636;
+    width: 122.3px;
+    height: 28.1px;
+}
+.group-parent1 {
+    position: absolute;
+    top: 141.35px;
+    left: 163px;
+    width: 122.3px;
+    height: 111.2px;
+}
+.metrics-wrapper3 {
+    position: absolute;
+    top: 28.11px;
+    left: 3.07px;
+    width: 104.5px;
+    height: 83.1px;
+}
+.launch-dir {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 17.13px;
+    line-height: 90%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: Barlow;
+    color: #d63636;
+    width: 105.5px;
+    height: 28.1px;
+}
+.group-parent2 {
+    position: absolute;
+    top: 141.35px;
+    left: 340.78px;
+    width: 107.5px;
+    height: 111.2px;
+}
+.group-parent3 {
+    position: absolute;
+    top: 282.7px;
+    left: 0px;
+    width: 109.6px;
+    height: 111.2px;
+}
+.group-parent4 {
+    position: absolute;
+    top: 282.7px;
+    left: 163px;
+    width: 122.3px;
+    height: 111.2px;
+}
+.group-parent5 {
+    position: absolute;
+    top: 282.7px;
+    left: 343.85px;
+    width: 104.5px;
+    height: 111.2px;
+}
+.group-parent6 {
+    position: absolute;
+    top: 424.05px;
+    left: 2.08px;
+    width: 107.5px;
+    height: 111.2px;
+}
+.group-parent7 {
+    position: absolute;
+    top: 424.05px;
+    left: 174.5px;
+    width: 104.5px;
+    height: 111.2px;
+}
+.metrics-wrapper9 {
+    position: absolute;
+    top: 28.11px;
+    left: 13.1px;
+    width: 104.5px;
+    height: 83.1px;
+}
+.descent-ang {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 17.13px;
+    line-height: 90%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: Barlow;
+    color: #d63636;
+    width: 125.5px;
+    height: 28.1px;
+}
+.group-parent8 {
+    position: absolute;
+    top: 424.05px;
+    left: 330.75px;
+    width: 125.5px;
+    height: 111.2px;
+}
+.metric-area {
+    position: absolute;
+    top: 112.05px;
+    left: 748.62px;
+    width: 456.3px;
+    height: 535.2px;
+}
+.group-child {
+    position: absolute;
+    height: 100%;
+    width: 88.97%;
+    top: 0%;
+    right: 11.03%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.y {
+    position: absolute;
+    top: 95.82%;
+    left: 11.11%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+}
+.y1 {
+    position: absolute;
+    top: 80.65%;
+    left: 3.7%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+}
+.y2 {
+    position: absolute;
+    top: 64.91%;
+    left: 3.7%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+}
+.y3 {
+    position: absolute;
+    top: 48.39%;
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+}
+.y4 {
+    position: absolute;
+    top: 32.64%;
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+}
+.y5 {
+    position: absolute;
+    top: 16.52%;
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+}
+.y6 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+}
+.y-parent {
+    position: absolute;
+    height: 92.36%;
+    width: 7.96%;
+    top: 6.75%;
+    right: -0.01%;
+    bottom: 0.89%;
+    left: 92.05%;
+}
+.group-parent10 {
+    position: absolute;
+    height: 84.64%;
+    width: 95.79%;
+    top: 3.3%;
+    right: 4.21%;
+    bottom: 12.06%;
+    left: 0%;
+}
+.player-position-icon {
+    position: absolute;
+    top: 484.05px;
+    left: 136.31px;
+    width: 26.5px;
+    height: 26.5px;
+}
+.old-shots-icon {
+    position: absolute;
+    top: 134.75px;
+    left: 56.65px;
+    width: 239.6px;
+    height: 253.2px;
+}
+.group-item {
+    position: absolute;
+    top: 220.73px;
+    left: 80.35px;
+    width: 15.2px;
+    height: 15.2px;
+}
+.group-inner {
+    position: absolute;
+    top: 0px;
+    left: 354.07px;
+    border-right: 5px solid #000;
+    box-sizing: border-box;
+    width: 5px;
+    height: 555.7px;
+}
+.group-icon {
+    position: absolute;
+    top: 224.54px;
+    left: 83.96px;
+    width: 7.9px;
+    height: 7.9px;
+}
+.shot-trace-icon {
+    position: absolute;
+    top: 230.9px;
+    left: 91.24px;
+    width: 58.6px;
+    height: 238.2px;
+}
+.group-parent9 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+.dispersion-chart {
+    position: absolute;
+    height: 76.49%;
+    width: 27.66%;
+    top: 14%;
+    right: 64.66%;
+    bottom: 9.51%;
+    left: 7.68%;
+    font-size: 11.72px;
+    font-family: Barlow;
+}
+.colour-indicator-icon {
+    position: absolute;
+    top: 0px;
+    left: 20.36px;
+    max-height: 100%;
+    width: 75.5px;
+}
+.place-ball {
+    position: absolute;
+    height: 51.15%;
+    top: 48.84%;
+    left: 0px;
+    letter-spacing: -0.01em;
+    line-height: 88%;
+    display: inline-block;
+    font-weight: 600;
+    width: 116.2px;
+}
+.shot-status {
+    position: absolute;
+    top: 81.98px;
+    left: 536.4px;
+    width: 116.2px;
+    height: 104.8px;
+    font-size: 48px;
+}
+.clock {
+    position: absolute;
+    height: 4.96%;
+    top: 5.52%;
+    left: 114.34px;
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-family: Barlow;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    display: inline-block;
+    width: 105.6px;
+}
+.video-replay-icon {
+    position: absolute;
+    top: 316.12px;
+    left: 516.28px;
+    width: 168.4px;
+    height: 289.6px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.x9 {
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    height: 720px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 59.94px;
+    color: #fff;
+    font-family: 'Acumin Pro ExtraCondensed';
+}
+

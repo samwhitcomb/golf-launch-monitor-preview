@@ -1,0 +1,841 @@
+/* Font Face Definitions */
+@font-face {
+    font-family: 'Acumin Pro ExtraCondensed';
+    src: url('Fonts/AcuminPro/Acumin-Pro-ExtraCond-Bold-Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fonts/Barlow/Barlow_300Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fonts/Barlow/Barlow_500Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fonts/Barlow/Barlow_600SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-x: auto;
+}
+
+/* Monitor Wrapper - scales with viewport */
+#monitor-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /* Width/height will be set dynamically via JS */
+    overflow: hidden;
+}
+
+/* Keep control panel sticky on the right edge */
+.control-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    z-index: 1000; /* Above monitor */
+}
+
+/* Remove flex shrink for container since we're using absolute positioning now */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Main Screen - Exact Reference Match */
+.x9 {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+    text-align: center;
+    font-size: 59.94px;
+    color: #fff;
+    font-family: 'Acumin Pro ExtraCondensed';
+    border: 1px solid #333;
+    border-radius: 1px;
+    flex-shrink: 0;
+}
+
+/* Logo */
+.logobrand-bugolf-icon {
+    position: absolute;
+    top: 674.33px;
+    left: 580px; /* Centered horizontally: 640 - (120/2) = 580px */
+    width: 120px;
+    height: 19px;
+    overflow: hidden;
+}
+
+/* Clock - moved to top right */
+.clock {
+    position: absolute;
+    height: 4.96%;
+    top: 5.52%;
+    right: 50px; /* Changed from left to right positioning */
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-family: Barlow;
+    font-weight: 300; /* Using Light weight variant */
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right; /* Changed from left to right alignment */
+    display: inline-block;
+    width: 105.6px;
+}
+
+/* Shot Counter above dispersion chart */
+.chart-shot-counter {
+    position: absolute;
+    top: -25px; /* Position above the chart */
+    left: -70px;
+    right: 0;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chart-shot-counter span:first-child {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.chart-shot-counter span:last-child {
+    color: #ff6b6b;
+    font-weight: 700;
+}
+
+/* Metrics Area */
+.metric-area {
+    position: absolute;
+    top: 112.05px;
+    left: 800px;
+    width: 390px; /* Reduced from 456.3px */
+    height: 455px; /* Reduced from 535.2px */
+    
+    /* Grid Spacing Variables - Adjust these to change entire grid spacing */
+    --horizontal-spacing: 130px; /* Reduced from 155px to make room for centering */
+    --vertical-spacing: 140px;   /* Space between rows */
+    --base-left: 5px;           /* Starting left position */
+}
+
+/* Metric Values */
+.i {
+    position: relative;
+    line-height: 90%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 48px; /* Reduced from default */
+}
+
+.yards {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    margin-left: 7px; /* Reduced from 10px */
+    margin-top: 20px;
+    letter-spacing: 0.1em;
+    line-height: 155%;
+    font-weight: 500;
+    transform: rotate(-90deg);
+    font-size: 12px; /* Reduced from 14px */
+}
+
+/* Degree symbol specific styling */
+.unit-system .yards.degree {
+    font-size: 20px; /* Reduced from 24px */
+    font-weight: 400;
+    letter-spacing: 1em;
+    line-height: 1;
+    align-self: flex-start;
+    margin-top: -8px; /* Adjusted from -10px */
+    margin-left: 3px;
+    transform: none;
+}
+
+.unit-system {
+    width: 13px; /* Reduced from 15px */
+    height: 26px; /* Reduced from 30px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 4px; /* Reduced from 5px */
+    box-sizing: border-box;
+    font-size: 12px; /* Reduced from 14px */
+    font-family: Barlow;
+}
+
+.metric {
+    height: 29px; /* Reduced from 33.7px */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5px; /* Reduced from 3.1px */
+}
+
+.target-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.metrics {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 89px; /* Reduced from 104.5px */
+    height: 71px; /* Reduced from 83.1px */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding: 6px 0px 0px; /* Reduced from 7.3px */
+    box-sizing: border-box;
+}
+
+/* STANDARDIZED METRIC WRAPPER - All metric tiles use this */
+.metrics-wrapper,
+.metrics-wrapper2,
+.metrics-wrapper3,
+.metrics-wrapper9,
+.metrics-frame {
+    position: absolute;
+    top: 31px; /* Reduced from 36px */
+    left: 0px;
+    width: 89px; /* Reduced from 104.5px */
+    height: 71px; /* Reduced from 83.1px */
+}
+
+/* STANDARDIZED METRIC LABELS - All labels use consistent styling */
+.carry,
+.shot-type,
+.ball-speed,
+.launch-ang,
+.launch-dir,
+.descent-ang {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 13px; /* Reduced from 16px */
+    line-height: 90%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: Barlow;
+    color: #d63636;
+    width: 100%;
+    height: 24px; /* Reduced from 28.1px */
+    text-align: center;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+}
+
+/* Individual Metric Tile Positions - using CSS variables for grid spacing */
+.metric-tile {
+    position: absolute;
+    top: 0px; /* Row 0 */
+    left: var(--base-left); /* Column 0 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent {
+    position: absolute;
+    top: 0px; /* Row 0 */
+    left: calc(var(--base-left) + var(--horizontal-spacing)); /* Column 1 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-container {
+    position: absolute;
+    top: 0px; /* Row 0 */
+    left: calc(var(--base-left) + var(--horizontal-spacing) * 2); /* Column 2 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-div {
+    position: absolute;
+    top: var(--vertical-spacing); /* Row 1 */
+    left: var(--base-left); /* Column 0 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent1 {
+    position: absolute;
+    top: var(--vertical-spacing); /* Row 1 */
+    left: calc(var(--base-left) + var(--horizontal-spacing)); /* Column 1 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent2 {
+    position: absolute;
+    top: var(--vertical-spacing); /* Row 1 */
+    left: calc(var(--base-left) + var(--horizontal-spacing) * 2); /* Column 2 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent3 {
+    position: absolute;
+    top: calc(var(--vertical-spacing) * 2); /* Row 2 */
+    left: var(--base-left); /* Column 0 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent4 {
+    position: absolute;
+    top: calc(var(--vertical-spacing) * 2); /* Row 2 */
+    left: calc(var(--base-left) + var(--horizontal-spacing)); /* Column 1 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent5 {
+    position: absolute;
+    top: calc(var(--vertical-spacing) * 2); /* Row 2 */
+    left: calc(var(--base-left) + var(--horizontal-spacing) * 2); /* Column 2 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent6 {
+    position: absolute;
+    top: calc(var(--vertical-spacing) * 3); /* Row 3 */
+    left: var(--base-left); /* Column 0 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent7 {
+    position: absolute;
+    top: calc(var(--vertical-spacing) * 3); /* Row 3 */
+    left: calc(var(--base-left) + var(--horizontal-spacing)); /* Column 1 */
+    width: 89px;
+    height: 95px;
+}
+
+.group-parent8 {
+    position: absolute;
+    top: calc(var(--vertical-spacing) * 3); /* Row 3 */
+    left: calc(var(--base-left) + var(--horizontal-spacing) * 2); /* Column 2 */
+    width: 89px;
+    height: 95px;
+}
+
+/* Dispersion Chart */
+.dispersion-chart {
+    position: absolute;
+    height: 76.49%;
+    width: 32%; /* Expanded from 27.66% to fill more horizontal space */
+    top: 14%;
+    right: 64.66%;
+    bottom: 9.51%;
+    left: 4%; /* Reduced from 7.68% to start earlier */
+    font-size: 11.72px;
+    font-family: Barlow;
+}
+
+.group-parent9 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
+.group-parent10 {
+    position: absolute;
+    height: 84.64%;
+    width: 95.79%;
+    top: 3.3%;
+    right: 4.21%;
+    bottom: 12.06%;
+    left: 0%;
+}
+
+.group-child {
+    position: absolute;
+    height: 100%;
+    width: 88.97%;
+    top: 0%;
+    right: 11.03%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+/* Distance Markers - Now drawn on canvas, hide HTML versions */
+.y-parent {
+    display: none; /* Hidden - using canvas-based markers instead */
+}
+
+/* Keep player position visible */
+.player-position-icon {
+    position: absolute;
+    top: 480px;  /* 474.05 - 13.25 to center the circle */
+    left: 143px; /* 136.31 - 13.25 to center the circle */
+    width: 26.5px;
+    height: 26.5px;
+    z-index: 15; /* Above canvas elements */
+}
+
+.y {
+    position: absolute;
+    top: 457px;  /* Player Y position (474.05) - canvas offset (17px) = 457px within chart */
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.y1 {
+    position: absolute;
+    top: 382px;  /* 457px - (75px per 25 yards) = 382px */
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.y2 {
+    position: absolute;
+    top: 307px;  /* 457px - (150px per 50 yards) = 307px */
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.y3 {
+    position: absolute;
+    top: 232px;  /* 457px - (225px per 75 yards) = 232px */
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.y4 {
+    position: absolute;
+    top: 157px;  /* 457px - (300px per 100 yards) = 157px */
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.y5 {
+    position: absolute;
+    top: 82px;  /* 457px - (375px per 125 yards) = 82px */
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.y6 {
+    position: absolute;
+    top: 7px;  /* 457px - (450px per 150 yards) = 7px */
+    left: 0%;
+    letter-spacing: -0.01em;
+    line-height: 155%;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+/* Shot Elements */
+.old-shots-icon {
+    position: absolute;
+    top: 134.75px;
+    left: 56.65px;
+    width: 239.6px;
+    height: 253.2px;
+    display: none; /* Hide the old static shots - using dynamic history now */
+}
+
+.group-item {
+    position: absolute;
+    top: 220.73px;
+    left: 80.35px;
+    width: 15.2px;
+    height: 15.2px;
+    display: none; /* Hide the red circle completely */
+}
+
+.group-inner {
+    position: absolute;
+    top: 0px;
+    left: 354.07px;
+    border-right: 5px solid #000;
+    box-sizing: border-box;
+    width: 5px;
+    height: 555.7px;
+}
+
+.group-icon {
+    position: absolute;
+    top: 224.54px;
+    left: 83.96px;
+    width: 7.9px;
+    height: 7.9px;
+    display: none; /* Hide this too */
+}
+
+.shot-trace-icon {
+    position: absolute;
+    top: 230.9px;
+    left: 91.24px;
+    width: 58.6px;
+    height: 238.2px;
+    display: none; /* Hide the old SVG shot trace */
+}
+
+/* Status Indicator */
+.shot-status {
+    position: absolute;
+    top: 81.98px;
+    left: 582px; /* Centered horizontally: 640 - (116.2/2) = 581.9px */
+    width: 116.2px;
+    height: 104.8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.status-bar {
+    width: 80px;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+    transition: all 0.3s ease;
+}
+
+/* Breathing animation for PLACE BALL text */
+@keyframes breathe {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.2; }
+}
+
+.status-text-display {
+    font-family: 'Barlow';
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.status-text-display.breathing {
+    animation: breathe 2s ease-in-out infinite;
+}
+
+/* Video Replay */
+.video-replay-container {
+    position: absolute;
+    top: 216.12px;
+    left: 556px; /* Centered horizontally: 640 - (168.4/2) = 555.8px */
+    width: 168.4px;
+    height: 390px;
+    overflow: hidden;
+    border: 0px solid #333;
+    border-radius: 2px;
+    background: #000;
+}
+
+.video-replay-player {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Rotate and scale to fill container properly */
+    /* Scale factor calculated: container height/width ratio = 289.6/168.4 ≈ 1.72 */
+    transform: rotate(-90deg) scale(3.6);
+    transform-origin: center;
+}
+
+.video-replay-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Control Panel (Right Side) */
+.control-panel h2 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+/* System Status Display */
+.system-status {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #333;
+    border-radius: 6px;
+}
+
+.system-status h3 {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.status-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.status-indicator-small {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.status-text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.control-btn {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #3a3a3a;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.control-btn:hover {
+    background: #4a4a4a;
+    border-color: #777;
+    transform: translateY(-2px);
+}
+
+.control-btn.fire-shot {
+    background: #ff6b6b;
+    border-color: #ff4444;
+}
+
+.control-btn.fire-shot:hover {
+    background: #ff8e8e;
+    border-color: #ff6666;
+}
+
+.control-btn.place-ball {
+    background: #4ecdc4;
+    border-color: #45b7aa;
+}
+
+.control-btn.place-ball:hover {
+    background: #6dd5cd;
+    border-color: #5cc4bb;
+}
+
+/* Shot Information */
+.shot-info {
+    margin-top: 30px;
+    padding: 15px;
+    background: #333;
+    border-radius: 6px;
+}
+
+.shot-info h3 {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.shot-counter {
+    color: #ccc;
+    font-size: 12px;
+    text-align: center;
+}
+
+.shot-counter span {
+    color: #ff6b6b;
+    font-weight: 500;
+}
+
+/* Shot Type Color Dot */
+.shot-type-dot {
+    width: 7px; /* Reduced from 8px */
+    height: 7px; /* Reduced from 8px */
+    border-radius: 50%;
+    background-color: #4a9eff; /* Default blue for STRAIGHT */
+    margin: auto; /* Center within unit-system container */
+}
+
+/* Loading animation for metrics */
+.metric-tile.loading .i,
+.group-parent.loading .i,
+.group-container.loading .i,
+.group-div.loading .i,
+.group-parent1.loading .i,
+.group-parent2.loading .i,
+.group-parent3.loading .i,
+.group-parent4.loading .i,
+.group-parent5.loading .i,
+.group-parent6.loading .i,
+.group-parent7.loading .i,
+.group-parent8.loading .i {
+    opacity: 0;
+    position: relative;
+}
+
+/* Hide units during loading as well */
+.metric-tile.loading .unit-system,
+.group-parent.loading .unit-system,
+.group-container.loading .unit-system,
+.group-div.loading .unit-system,
+.group-parent1.loading .unit-system,
+.group-parent2.loading .unit-system,
+.group-parent3.loading .unit-system,
+.group-parent4.loading .unit-system,
+.group-parent5.loading .unit-system,
+.group-parent6.loading .unit-system,
+.group-parent7.loading .unit-system,
+.group-parent8.loading .unit-system {
+    opacity: 0;
+}
+
+.metric-tile.loading::after,
+.group-parent.loading::after,
+.group-container.loading::after,
+.group-div.loading::after,
+.group-parent1.loading::after,
+.group-parent2.loading::after,
+.group-parent3.loading::after,
+.group-parent4.loading::after,
+.group-parent5.loading::after,
+.group-parent6.loading::after,
+.group-parent7.loading::after,
+.group-parent8.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    background-image: url('Assets/White_Loading.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Animation classes for updates */
+.metric-tile.updating {
+    background: rgba(255, 107, 107, 0.1) !important;
+    transform: scale(1.05);
+}
+
+.metric-tile.updating .i {
+    color: #ff6b6b !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .control-panel {
+        width: 100%;
+        max-width: 1280px;
+        margin-top: 20px;
+    }
+    
+    .control-panel .control-btn {
+        width: calc(33.33% - 7px);
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .shot-info {
+        margin-top: 20px;
+    }
+} 

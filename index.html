@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Launch Monitor - Default Screen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Monitor Wrapper for scalable preview -->
+        <div id="monitor-wrapper">
+            <!-- Main Monitor Screen -->
+            <div class="x9">
+                <!-- Logo -->
+                <img class="logobrand-bugolf-icon" src="Assets/Logo/Brand BU/Golf.svg" alt="Golf Logo">
+                
+                <!-- Clock -->
+                <div class="clock">12:34</div>
+                
+                <!-- Status Indicator -->
+                <div class="shot-status">
+                    <div class="status-bar"></div>
+                    <div class="status-text-display">PLACE BALL</div>
+                </div>
+                
+                <!-- Video Replay Area -->
+                <div class="video-replay-container">
+                    <video class="video-replay-player" loop muted>
+                        <source src="assets/shot-video.mp4" type="video/mp4">
+                    </video>
+                    <img src="assets/video-replay.svg" alt="Video Replay" class="video-replay-image">
+                </div>
+                
+                <!-- Dispersion Chart -->
+                <div class="dispersion-chart">
+                    <!-- Shot Counter above chart -->
+                    <div class="chart-shot-counter">
+                        <span>SHOTS: </span><span id="chartShotCount">0</span>
+                    </div>
+                    
+                    <div class="group-parent9">
+                        <div class="group-parent10">
+                            <img src="assets/group-22177.svg" alt="Grid" class="group-child">
+                        </div>
+                        
+                        <!-- Distance markers -->
+                        <div class="y-parent">
+                            <div class="y">0 YDS</div>
+                            <div class="y1">25 YDS</div>
+                            <div class="y2">50 YDS</div>
+                            <div class="y3">75 YDS</div>
+                            <div class="y4">100 YDS</div>
+                            <div class="y5">125 YDS</div>
+                            <div class="y6">150 YDS</div>
+                        </div>
+                        
+                        <!-- Player position -->
+                        <img src="assets/player-position.svg" alt="Player" class="player-position-icon">
+                        
+                        <!-- Shot elements (hidden by default) -->
+                        <img src="assets/old-shots.svg" alt="Old Shots" class="old-shots-icon">
+                        <img src="assets/group-22196.svg" alt="Red Circle" class="group-item">
+                        <img src="assets/group-22197.svg" alt="Shot Dot" class="group-icon">
+                        <img src="assets/shot-trace.svg" alt="Shot Trace" class="shot-trace-icon">
+                        
+                        <!-- Separator line -->
+                        <div class="group-inner"></div>
+                    </div>
+                </div>
+                
+                <!-- Metrics Area -->
+                <div class="metric-area">
+                    <!-- Row 1 -->
+                    <div class="metric-tile">
+                        <div class="metrics">
+                            <div class="carry">CARRY DIST.</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">156</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards">YDS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-parent">
+                        <div class="metrics">
+                            <div class="carry">TOTAL DIST.</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">168</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards">YDS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-container">
+                        <div class="metrics">
+                            <div class="shot-type">SHOT TYPE</div>
+                            <div class="metrics-wrapper2">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">STRAIGHT</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="shot-type-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2 -->
+                    <div class="group-div">
+                        <div class="metrics">
+                            <div class="ball-speed">BALL SPEED</div>
+                            <div class="metrics-wrapper3">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">125.6</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards">MPH</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-parent1">
+                        <div class="metrics">
+                            <div class="launch-ang">LAUNCH ANG.</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">16.8</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards degree">°</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-parent2">
+                        <div class="metrics">
+                            <div class="launch-dir">LAUNCH DIR.</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">0.3</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards degree">°</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3 -->
+                    <div class="group-parent3">
+                        <div class="metrics">
+                            <div class="carry">CLUB SPEED</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">89.3</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards">MPH</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-parent4">
+                        <div class="metrics">
+                            <div class="carry">SPIN RATE</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">5420</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards">RPM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-parent5">
+                        <div class="metrics">
+                            <div class="carry">SPIN AXIS</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">-2.1</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards degree">°</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 4 -->
+                    <div class="group-parent6">
+                        <div class="metrics">
+                            <div class="carry">SMASH FAC.</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">1.40</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-parent7">
+                        <div class="metrics">
+                            <div class="carry">APEX</div>
+                            <div class="metrics-wrapper">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">79</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards">FT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group-parent8">
+                        <div class="metrics">
+                            <div class="descent-ang">DESCENT ANG.</div>
+                            <div class="metrics-frame">
+                                <div class="metric">
+                                    <div class="target-title">
+                                        <div class="i">-42.3</div>
+                                    </div>
+                                    <div class="unit-system">
+                                        <div class="yards degree">°</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end of .x9 -->
+        </div> <!-- end of #monitor-wrapper -->
+        
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <h2>LAUNCH MONITOR</h2>
+            
+            <!-- System Status -->
+            <div class="system-status">
+                <h3>System Status</h3>
+                <div class="status-display">
+                    <div class="status-indicator-small"></div>
+                    <div class="status-text">PLACE BALL</div>
+                </div>
+            </div>
+            
+            <!-- Controls -->
+            <button class="control-btn place-ball" onclick="placeBall()">
+                🎯 PLACE BALL
+            </button>
+            
+            <button class="control-btn fire-shot" onclick="fireShot()">
+                🔥 FIRE SHOT
+            </button>
+            
+            <button class="control-btn" onclick="resetScreen()">
+                🔄 RESET SCREEN
+            </button>
+            
+            <!-- Shot Information -->
+            <div class="shot-info">
+                <h3>Shot Information</h3>
+                <div class="shot-counter">
+                    Shots Fired: <span id="shotCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

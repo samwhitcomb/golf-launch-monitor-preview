@@ -1,0 +1,6 @@
+<svg width="168" height="290" viewBox="0 0 168 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="168" height="290" fill="#111111"/>
+    <rect x="2" y="2" width="164" height="286" fill="#1a1a1a" stroke="#333333" stroke-width="2"/>
+    <polygon points="70,120 70,170 110,145" fill="#ff6b6b"/>
+    <text x="84" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">VIDEO REPLAY</text>
+</svg> 
