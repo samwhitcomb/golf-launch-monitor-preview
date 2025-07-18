@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golf Launch Monitor</title>
+    <title>Golf Launch Monitor - Page 2</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Phone-specific styles */
@@ -24,6 +24,7 @@
             background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
             position: relative;
         }
+        
         .pre-header {
             display: flex;
             justify-content: flex-end;
@@ -220,10 +221,14 @@
             margin-top: 5px;
             font-size: 30px !important;
             font-weight: 600 !important;
+            position: absolute !important;
+            right: 10px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
         }
         
         .phone-metric-tile .yards {
-            transform: none;
+            transform: rotate(90deg) !important;
             margin: 0;
             text-align: center;
             font-size: 30px !important;
@@ -257,8 +262,6 @@
             border: 1px solid #333;
         }
         
-
-        
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
@@ -289,7 +292,7 @@
             .phone-metric-tile .carry,
             .phone-metric-tile .ball-speed,
             .phone-metric-tile .launch-ang {
-                font-size: 30px;
+                font-size: 40px;
             }
             
             .phone-metric-tile .unit-system {
@@ -318,15 +321,16 @@
             .phone-metric-tile .carry,
             .phone-metric-tile .ball-speed,
             .phone-metric-tile .launch-ang {
-                font-size: 30px;
+                font-size: 40px;
             }
             
             .phone-metric-tile .unit-system {
-                font-size: 30px !important;
+                font-size: 40px !important;
             }
             
             .phone-metric-tile .yards {
-                font-size: 30px !important;
+                font-size: 40px !important;
+                margin-top: -60px;
                 font-weight: 600 !important;
             }
         }
@@ -341,7 +345,8 @@
         
         <!-- Header -->
         <div class="pre-header">
-            <a href="page2.html" class="next-button">NEXT</a>
+            <a href="index.html" class="next-button">BACK</a>
+            <a href="page3.html" class="next-button" style="margin-left: 10px;">NEXT</a>
         </div>
         <div class="phone-header">
             <img src="Assets/Logo/Brand BU/Golf.svg" alt="Golf Logo" class="logo-small">
@@ -398,7 +403,7 @@
                                 <div class="i" id="launchAngleValue">16.8</div>
                             </div>
                             <div class="unit-system">
-                                <div class="yards degree">°</div>
+                                <div class="yards">°</div>
                             </div>
                         </div>
                     </div>
